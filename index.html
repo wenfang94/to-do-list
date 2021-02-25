@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>To Do List</h1>
+  <!-- to do list, 
+    svg icon nested inside li tag
+    @click.self in li tag prevents the nested svg icon listen to click on li tag -->
+  <ul id="list" class="list">
+    <li class="work"  v-for="(item, index) in items" @click.self="completion"> {{item}} <img class="icon" src="./trash_can.svg" @click="trash(index)"/></li>
+  </ul>
+  <!-- form to add new to do list item -->
+  <form class="add" action="" @submit.prevent="addItem">
+    <h2>Add Items</h2>
+    <input type="text" v-model="item"><br><br>
+    <input type="submit" value="Add">
+  </form>
+  </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
