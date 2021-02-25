@@ -5,6 +5,6 @@ When the page loads, the app loads for items stored in Local Storage and update 
 Existing items are displayed in a list.
 Items are displayed as complete or incomplete.
 A form is there to allow new items to be added to the list.
-Clicking on an item should toggle the item's complete state.
+Clicking on an item will toggle the item's complete state on and off.
 A delete button is next to each item. When clicked, the item will be deleted from the list
 Any changes to the list will be propagated to the Local Storage
